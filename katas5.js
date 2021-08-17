@@ -28,12 +28,13 @@ const testReverseSentence1 = () => {
     let expected = "cachorros ama bob"
     console.assert(result === expected, `esperado  ${expected}, obtido: ${result}`)
 }
+testReverseSentence1()
 const testReverseSentence2 = () => {
     let result = reverseSentence("criando teste aleatorio")
-    let expected = "aleatorio criando teste"
+    let expected = "aleatorio teste criando"
     console.assert(result === expected, `esperado  ${expected}, obtido: ${result}`)
 }
-
+testReverseSentence2()
 function reverseSentence(string) {
     let result = []
     let split = string.split(" ")
@@ -50,11 +51,13 @@ const testMinimumValue1 = () => {
     let expected = 1
     console.assert(result === expected, `esperado  ${expected}, obtido: ${result}`)
 } 
+testMinimumValue1()
 const testMinimumValue2 = () => {
     let result = minimumValue([10, 20, 5, 8, 15])
     let expected = 5
     console.assert(result === expected, `esperado  ${expected}, obtido: ${result}`)
 } 
+testMinimumValue2()
 function minimumValue(arr) {
     result = arr.sort((a, b) => a-b)
     return result[0]
@@ -67,11 +70,13 @@ const testMaximumValue1 = () => {
     let expected = 5
     console.assert(result === expected, `esperado  ${expected}, obtido: ${result}`)
 } 
+testMaximumValue1()
 const testMaximumValue2 = () => {
     let result = maximumValue([10, 20, 5, 8, 15])
     let expected = 20
     console.assert(result === expected, `esperado  ${expected}, obtido: ${result}`)
 } 
+testMaximumValue2()
 function maximumValue(arr) {
     result = arr.sort((a, b) => b-a)
     return result[0]
@@ -84,11 +89,13 @@ const testCalculateRemainder1 = () => {
     let expected = 0
     console.assert(result === expected, `esperado  ${expected}, obtido: ${result}`)
 }
+testCalculateRemainder1()
 const testCalculateRemainder2 = () => {
     let result = calculateRemainder(15 , 2)
     let expected = 1
     console.assert(result === expected, `esperado  ${expected}, obtido: ${result}`)
 }
+testCalculateRemainder2()
 function calculateRemainder(numero, dividido){
     resto = numero%dividido
     
@@ -101,13 +108,14 @@ const testDistinctValues1 = () => {
     let result = distinctValues("1 3 5 3 7 3 1 1 5" )
     let expected = "1 3 5 7"
     console.assert(result === expected, `esperado  ${expected}, obtido: ${result}`)
-}
+} 
+testDistinctValues1()
 const testDistinctValues2 = () => {
     let result = distinctValues("2 4 6 5 9 6 2 0 9")
     let expected = "2 4 6 5 9 0"
     console.assert(result === expected, `esperado  ${expected}, obtido: ${result}`)
 }
-
+testDistinctValues2()
 function distinctValues(string) {
     let arrString = string.split(" ")
     let result = new Set(arrString)
@@ -127,10 +135,10 @@ testCountValues1()
 
 const testCountValues2 = () => {
     let result = countValues("2 4 6 5 9 6 2 0 9")
-    let expected = "2(2) 4(1) 6(2) 5(1) 0(1) 9(1)"
+    let expected = "0(1) 2(2) 4(1) 5(1) 6(2) 9(2)"
     console.assert(result === expected, `esperado  ${expected}, obtido: ${result}`)
 }
-
+testCountValues2()
 function countValues(string) {
     let result = []
     string = string.split(" ")
@@ -158,11 +166,13 @@ const testEvaluateExpression1 = () => {
     let expected = 11
     console.assert(result === expected, `esperado  ${expected}, obtido: ${result}`)
 }
+testEvaluateExpression1()
 const testEvaluateExpression2 = () => {
     let result = evaluateExpression("a + b + c - d", {a: 1, b: 7, c: 3, d: 14})
     let expected = -3
     console.assert(result === expected, `esperado  ${expected}, obtido: ${result}`)
 }
+testEvaluateExpression2()
 function evaluateExpression(exprecion, values) {
     exprecion = exprecion.split(" ")
     let result = 0
